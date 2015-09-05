@@ -25,9 +25,6 @@ import com.github.klieber.phantomjs.locate.PhantomJsLocator;
 import com.github.klieber.phantomjs.locate.PhantomJsLocatorOptions;
 import com.github.klieber.phantomjs.locate.RepositoryDetails;
 import org.apache.maven.plugin.MojoFailureException;
-import org.apache.maven.plugins.annotations.LifecyclePhase;
-import org.apache.maven.plugins.annotations.Mojo;
-import org.apache.maven.plugins.annotations.Parameter;
 import org.eclipse.aether.RepositorySystem;
 import org.eclipse.aether.RepositorySystemSession;
 import org.eclipse.aether.repository.RemoteRepository;
@@ -41,7 +38,7 @@ import java.util.List;
  *
  * @since 0.1
  */
-@Mojo(name = "install", defaultPhase = LifecyclePhase.PROCESS_TEST_SOURCES)
+//@Mojo(name = "install", defaultPhase = LifecyclePhase.PROCESS_TEST_SOURCES)
 public class InstallPhantomJsMojo extends AbstractPhantomJsMojo implements PhantomJsLocatorOptions {
 
   private static final String UNABLE_TO_INSTALL = "Failed to install phantomjs.";
@@ -51,10 +48,10 @@ public class InstallPhantomJsMojo extends AbstractPhantomJsMojo implements Phant
    *
    * @since 0.1
    */
-  @Parameter(
-      property = "phantomjs.version",
-      required = true
-  )
+//  @Parameter(
+//      property = "phantomjs.version",
+//      required = true
+//  )
   private String version;
 
   /**
@@ -62,9 +59,9 @@ public class InstallPhantomJsMojo extends AbstractPhantomJsMojo implements Phant
    *
    * @since 0.1
    */
-  @Parameter(
-      property = "phantomjs.baseUrl"
-  )
+//  @Parameter(
+//      property = "phantomjs.baseUrl"
+//  )
   private String baseUrl;
 
   /**
@@ -72,11 +69,11 @@ public class InstallPhantomJsMojo extends AbstractPhantomJsMojo implements Phant
    *
    * @since 0.1
    */
-  @Parameter(
-      defaultValue = "${project.build.directory}/phantomjs-maven-plugin",
-      property = "phantomjs.outputDir",
-      required = true
-  )
+//  @Parameter(
+//      defaultValue = "${project.build.directory}/phantomjs-maven-plugin",
+//      property = "phantomjs.outputDir",
+//      required = true
+//  )
   private File outputDirectory;
 
   /**
@@ -84,11 +81,11 @@ public class InstallPhantomJsMojo extends AbstractPhantomJsMojo implements Phant
    *
    * @since 0.2
    */
-  @Parameter(
-      defaultValue = "true",
-      property = "phantomjs.checkSystemPath",
-      required = true
-  )
+//  @Parameter(
+//      defaultValue = "true",
+//      property = "phantomjs.checkSystemPath",
+//      required = true
+//  )
   private boolean checkSystemPath;
 
   /**
@@ -98,11 +95,11 @@ public class InstallPhantomJsMojo extends AbstractPhantomJsMojo implements Phant
    *
    * @since 0.2
    */
-  @Parameter(
-      defaultValue = "true",
-      property = "phantomjs.enforceVersion",
-      required = false
-  )
+//  @Parameter(
+//      defaultValue = "true",
+//      property = "phantomjs.enforceVersion",
+//      required = false
+//  )
   private String enforceVersion;
 
   /**
@@ -114,23 +111,23 @@ public class InstallPhantomJsMojo extends AbstractPhantomJsMojo implements Phant
    * </ul>
    * @since 0.3
    */
-  @Parameter(
-      defaultValue = "REPOSITORY",
-      property = "phantomjs.source",
-      required = true
-  )
+//  @Parameter(
+//      defaultValue = "REPOSITORY",
+//      property = "phantomjs.source",
+//      required = true
+//  )
   private PhantomJsLocatorOptions.Source source;
 
-  @Parameter(
-      defaultValue = "${repositorySystemSession}",
-      readonly = true
-  )
+//  @Parameter(
+//      defaultValue = "${repositorySystemSession}",
+//      readonly = true
+//  )
   private RepositorySystemSession repositorySystemSession;
 
-  @Parameter(
-      defaultValue = "${project.remoteProjectRepositories}",
-      readonly = true
-  )
+//  @Parameter(
+//      defaultValue = "${project.remoteProjectRepositories}",
+//      readonly = true
+//  )
   private List<RemoteRepository> remoteRepositories;
 
   private RepositorySystem repositorySystem;

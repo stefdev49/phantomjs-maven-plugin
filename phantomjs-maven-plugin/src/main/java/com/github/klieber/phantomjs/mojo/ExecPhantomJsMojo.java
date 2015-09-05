@@ -24,9 +24,6 @@ import com.github.klieber.phantomjs.exec.ExecutionException;
 import com.github.klieber.phantomjs.exec.PhantomJsExecutor;
 import com.github.klieber.phantomjs.exec.PhantomJsProcessBuilder;
 import org.apache.maven.plugin.MojoFailureException;
-import org.apache.maven.plugins.annotations.LifecyclePhase;
-import org.apache.maven.plugins.annotations.Mojo;
-import org.apache.maven.plugins.annotations.Parameter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -38,7 +35,7 @@ import java.util.List;
  *
  * @since 0.2
  */
-@Mojo(name = "exec", defaultPhase = LifecyclePhase.TEST)
+//@Mojo(name = "exec", defaultPhase = LifecyclePhase.TEST)
 public class ExecPhantomJsMojo extends AbstractPhantomJsMojo {
 
   private static final Logger LOGGER = LoggerFactory.getLogger(ExecPhantomJsMojo.class);
@@ -51,10 +48,10 @@ public class ExecPhantomJsMojo extends AbstractPhantomJsMojo {
    *
    * @since 0.5
    */
-  @Parameter(
-      property = "phantomjs.workingDirectory",
-      defaultValue = "${project.basedir}"
-  )
+//  @Parameter(
+//      property = "phantomjs.workingDirectory",
+//      defaultValue = "${project.basedir}"
+//  )
   private String workingDirectory;
 
   /**
@@ -62,9 +59,9 @@ public class ExecPhantomJsMojo extends AbstractPhantomJsMojo {
    *
    * @since 0.2
    */
-  @Parameter(
-      property = "phantomjs.commandLineOptions"
-  )
+//  @Parameter(
+//      property = "phantomjs.commandLineOptions"
+//  )
   private String commandLineOptions;
 
   /**
@@ -72,9 +69,9 @@ public class ExecPhantomJsMojo extends AbstractPhantomJsMojo {
    *
    * @since 0.2
    */
-  @Parameter(
-      property = "phantomjs.script"
-  )
+//  @Parameter(
+//      property = "phantomjs.script"
+//  )
   private String script;
 
   /**
@@ -82,9 +79,9 @@ public class ExecPhantomJsMojo extends AbstractPhantomJsMojo {
    *
    * @since 0.2
    */
-  @Parameter(
-      property = "phantomjs.args"
-  )
+//  @Parameter(
+//      property = "phantomjs.args"
+//  )
   private List<String> arguments;
 
   /**
@@ -92,9 +89,9 @@ public class ExecPhantomJsMojo extends AbstractPhantomJsMojo {
    *
    * @since 0.2
    */
-  @Parameter(
-      property = "phantomjs.configFile"
-  )
+//  @Parameter(
+//      property = "phantomjs.configFile"
+//  )
   private File configFile;
 
   /**
@@ -102,10 +99,10 @@ public class ExecPhantomJsMojo extends AbstractPhantomJsMojo {
    *
    * @since 0.4
    */
-  @Parameter(
-      property = "phantomjs.failOnNonZeroExitCode",
-      defaultValue = "true"
-  )
+//  @Parameter(
+//      property = "phantomjs.failOnNonZeroExitCode",
+//      defaultValue = "true"
+//  )
   private boolean failOnNonZeroExitCode;
 
   private PhantomJsExecutor executor;

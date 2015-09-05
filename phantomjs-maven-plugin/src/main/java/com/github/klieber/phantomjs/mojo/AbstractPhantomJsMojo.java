@@ -22,7 +22,6 @@ package com.github.klieber.phantomjs.mojo;
 
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoFailureException;
-import org.apache.maven.plugins.annotations.Parameter;
 import org.apache.maven.project.MavenProject;
 import org.codehaus.plexus.util.StringUtils;
 
@@ -36,11 +35,11 @@ public abstract class AbstractPhantomJsMojo extends AbstractMojo {
    *
    * @since 0.1
    */
-  @Parameter(
-      defaultValue = "phantomjs.binary",
-      property = "phantomjs.propertyName",
-      required = true
-  )
+//  @Parameter(
+//      defaultValue = "phantomjs.binary",
+//      property = "phantomjs.propertyName",
+//      required = true
+//  )
   private String propertyName;
 
   /**
@@ -48,9 +47,9 @@ public abstract class AbstractPhantomJsMojo extends AbstractMojo {
    *
    * @since 0.2
    */
-  @Parameter(
-      property = "phantomjs.binary"
-  )
+//  @Parameter(
+//      property = "phantomjs.binary"
+//  )
   private String phantomJsBinary;
 
   /**
@@ -58,14 +57,14 @@ public abstract class AbstractPhantomJsMojo extends AbstractMojo {
    *
    * @since 0.2
    */
-  @Parameter(
-      defaultValue = "false",
-      property = "phantomjs.skip",
-      required = true
-  )
+//  @Parameter(
+//      defaultValue = "false",
+//      property = "phantomjs.skip",
+//      required = true
+//  )
   private boolean skip;
 
-  @Parameter(defaultValue = "${project}", readonly = true)
+//  @Parameter(defaultValue = "${project}", readonly = true)
   private MavenProject mavenProject;
 
   public final void execute() throws MojoFailureException {
