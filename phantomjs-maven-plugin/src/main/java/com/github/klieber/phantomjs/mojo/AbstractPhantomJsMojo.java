@@ -27,24 +27,25 @@ import org.codehaus.plexus.util.StringUtils;
 
 /**
  * Abstract base class for phantomjs-maven-plugin mojos.
+ *
  */
 public abstract class AbstractPhantomJsMojo extends AbstractMojo {
 
-  /**
-   * The name of the property that will contains the path to the binary.
-   *
-   * @since 0.1
-   */
-//  @Parameter(
+  //  @Parameter(
 //      defaultValue = "phantomjs.binary",
 //      property = "phantomjs.propertyName",
 //      required = true
 //  )
+  /**
+   * The name of the property that will contains the path to the binary.
+   * @parameter property="propertyName" required="true" defaultValue="phantomjs.binary"
+   * @since 0.1
+   */
   private String propertyName;
 
   /**
    * The path to the phantomjs binary
-   *
+   * @parameter property="phantomjs.binary"
    * @since 0.2
    */
 //  @Parameter(
@@ -54,7 +55,7 @@ public abstract class AbstractPhantomJsMojo extends AbstractMojo {
 
   /**
    * Skip the phantomjs-maven-plugin execution.
-   *
+   * @parameter property = "phantomjs.skip" defaultValue="false" required="true"
    * @since 0.2
    */
 //  @Parameter(
@@ -65,6 +66,9 @@ public abstract class AbstractPhantomJsMojo extends AbstractMojo {
   private boolean skip;
 
 //  @Parameter(defaultValue = "${project}", readonly = true)
+  /**
+   * @parameter property="mavenProject" readonly="true" defaultValue = "${project}"
+   */
   private MavenProject mavenProject;
 
   public final void execute() throws MojoFailureException {
