@@ -45,64 +45,44 @@ public class ExecPhantomJsMojo extends AbstractPhantomJsMojo {
 
   /**
    * Working Directory
-   *
+   * @parameter  property = "phantomjs.workingDirectory defaultValue = "${project.basedir}"
    * @since 0.5
    */
-//  @Parameter(
-//      property = "phantomjs.workingDirectory",
-//      defaultValue = "${project.basedir}"
-//  )
   private String workingDirectory;
 
   /**
    * Command line options for phantomjs
-   *
+   * @parameter property = "phantomjs.commandLineOptions"
    * @since 0.2
    */
-//  @Parameter(
-//      property = "phantomjs.commandLineOptions"
-//  )
   private String commandLineOptions;
 
   /**
    * Script to execute
-   *
+   * @parameter property = "phantomjs.script"
    * @since 0.2
    */
-//  @Parameter(
-//      property = "phantomjs.script"
-//  )
   private String script;
 
   /**
    * Arguments for the script being executed
-   *
+   * @parameter property = "phantomjs.args"
    * @since 0.2
    */
-//  @Parameter(
-//      property = "phantomjs.args"
-//  )
   private List<String> arguments;
 
   /**
    * Configuration file for phantomjs
-   *
+   * @parameter  property = "phantomjs.configFile"
    * @since 0.2
    */
-//  @Parameter(
-//      property = "phantomjs.configFile"
-//  )
   private File configFile;
 
   /**
    * Fail on a non-zero exit code
-   *
+   * @parameter property = "phantomjs.failOnNonZeroExitCode" defaultValue = "true"
    * @since 0.4
    */
-//  @Parameter(
-//      property = "phantomjs.failOnNonZeroExitCode",
-//      defaultValue = "true"
-//  )
   private boolean failOnNonZeroExitCode;
 
   private PhantomJsExecutor executor;

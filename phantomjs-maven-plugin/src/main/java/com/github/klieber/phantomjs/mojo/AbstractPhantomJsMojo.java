@@ -31,14 +31,9 @@ import org.codehaus.plexus.util.StringUtils;
  */
 public abstract class AbstractPhantomJsMojo extends AbstractMojo {
 
-  //  @Parameter(
-//      defaultValue = "phantomjs.binary",
-//      property = "phantomjs.propertyName",
-//      required = true
-//  )
   /**
    * The name of the property that will contains the path to the binary.
-   * @parameter property="propertyName" required="true" defaultValue="phantomjs.binary"
+   * @parameter property="phantomjs.propertyName" required=true defaultValue="phantomjs.binary"
    * @since 0.1
    */
   private String propertyName;
@@ -48,26 +43,19 @@ public abstract class AbstractPhantomJsMojo extends AbstractMojo {
    * @parameter property="phantomjs.binary"
    * @since 0.2
    */
-//  @Parameter(
-//      property = "phantomjs.binary"
-//  )
   private String phantomJsBinary;
 
   /**
    * Skip the phantomjs-maven-plugin execution.
-   * @parameter property = "phantomjs.skip" defaultValue="false" required="true"
+   * @parameter property = "phantomjs.skip" defaultValue="false" required=true
    * @since 0.2
    */
-//  @Parameter(
-//      defaultValue = "false",
-//      property = "phantomjs.skip",
-//      required = true
-//  )
   private boolean skip;
 
-//  @Parameter(defaultValue = "${project}", readonly = true)
   /**
-   * @parameter property="mavenProject" readonly="true" defaultValue = "${project}"
+   * FIXME: is property="mavenProject"  needed ?
+   *
+   * @parameter readonly=true defaultValue = "${project}"
    */
   private MavenProject mavenProject;
 

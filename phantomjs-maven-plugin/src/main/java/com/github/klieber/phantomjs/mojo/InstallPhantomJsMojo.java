@@ -45,47 +45,30 @@ public class InstallPhantomJsMojo extends AbstractPhantomJsMojo implements Phant
 
   /**
    * The version of phantomjs to install.
-   *
+   * @parameter property = "phantomjs.version" required = true
    * @since 0.1
    */
-//  @Parameter(
-//      property = "phantomjs.version",
-//      required = true
-//  )
   private String version;
 
   /**
    * The base url the phantomjs binary can be downloaded from.
-   *
+   * @parameter  property = "phantomjs.baseUrl"
    * @since 0.1
    */
-//  @Parameter(
-//      property = "phantomjs.baseUrl"
-//  )
   private String baseUrl;
 
   /**
    * The directory the phantomjs binary should be installed.
-   *
+   * @parameter property = "phantomjs.outputDir" defaultValue = "${project.build.directory}/phantomjs-maven-plugin" required = true
    * @since 0.1
    */
-//  @Parameter(
-//      defaultValue = "${project.build.directory}/phantomjs-maven-plugin",
-//      property = "phantomjs.outputDir",
-//      required = true
-//  )
   private File outputDirectory;
 
   /**
    * Check the system path for an existing phantomjs installation.
-   *
+   * @parameter property = "phantomjs.checkSystemPath" defaultValue = "true"  required = true
    * @since 0.2
    */
-//  @Parameter(
-//      defaultValue = "true",
-//      property = "phantomjs.checkSystemPath",
-//      required = true
-//  )
   private boolean checkSystemPath;
 
   /**
@@ -93,13 +76,9 @@ public class InstallPhantomJsMojo extends AbstractPhantomJsMojo implements Phant
    * or starting with version 0.7 of the plugin you can also specify a version range following the same syntax
    * as the <a href="http://maven.apache.org/enforcer/enforcer-rules/versionRanges.html">Maven Enforcer Plugin</a>.
    *
+   * @parameter property = "phantomjs.enforceVersion" defaultValue = "true" required = false
    * @since 0.2
    */
-//  @Parameter(
-//      defaultValue = "true",
-//      property = "phantomjs.enforceVersion",
-//      required = false
-//  )
   private String enforceVersion;
 
   /**
@@ -109,25 +88,20 @@ public class InstallPhantomJsMojo extends AbstractPhantomJsMojo implements Phant
    *   <li>REPOSITORY : download a copy from the maven central repository.</li>
    *   <li>URL : download directly from a url</li>
    * </ul>
+   *
+   * @parameter  property = "phantomjs.source" defaultValue = "REPOSITORY" required = true
    * @since 0.3
    */
-//  @Parameter(
-//      defaultValue = "REPOSITORY",
-//      property = "phantomjs.source",
-//      required = true
-//  )
   private PhantomJsLocatorOptions.Source source;
 
-//  @Parameter(
-//      defaultValue = "${repositorySystemSession}",
-//      readonly = true
-//  )
+  /**
+   * @parameter  defaultValue = "${repositorySystemSession}" readonly = true
+   */
   private RepositorySystemSession repositorySystemSession;
 
-//  @Parameter(
-//      defaultValue = "${project.remoteProjectRepositories}",
-//      readonly = true
-//  )
+  /**
+   * @parameter defaultValue = "${project.remoteProjectRepositories}" readonly = true
+   */
   private List<RemoteRepository> remoteRepositories;
 
   private RepositorySystem repositorySystem;
