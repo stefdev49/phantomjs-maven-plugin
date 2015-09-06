@@ -20,11 +20,7 @@
  */
 package com.github.klieber.phantomjs.util;
 
-import org.apache.maven.artifact.versioning.ArtifactVersion;
-import org.apache.maven.artifact.versioning.ComparableVersion;
-import org.apache.maven.artifact.versioning.DefaultArtifactVersion;
-import org.apache.maven.artifact.versioning.InvalidVersionSpecificationException;
-import org.apache.maven.artifact.versioning.VersionRange;
+import org.apache.maven.artifact.versioning.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

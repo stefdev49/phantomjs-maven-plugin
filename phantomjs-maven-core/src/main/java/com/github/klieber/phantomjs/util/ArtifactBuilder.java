@@ -21,8 +21,8 @@
 package com.github.klieber.phantomjs.util;
 
 import com.github.klieber.phantomjs.archive.PhantomJSArchive;
-import org.eclipse.aether.artifact.Artifact;
-import org.eclipse.aether.artifact.DefaultArtifact;
+import org.sonatype.aether.artifact.Artifact;
+import org.sonatype.aether.util.artifact.DefaultArtifact;
 
 public class ArtifactBuilder {
 

@@ -25,11 +25,10 @@ import com.github.klieber.phantomjs.locate.PhantomJsLocator;
 import com.github.klieber.phantomjs.locate.PhantomJsLocatorOptions;
 import com.github.klieber.phantomjs.locate.RepositoryDetails;
 import org.apache.maven.plugin.MojoFailureException;
-import org.eclipse.aether.RepositorySystem;
-import org.eclipse.aether.RepositorySystemSession;
-import org.eclipse.aether.repository.RemoteRepository;
+import org.sonatype.aether.RepositorySystem;
+import org.sonatype.aether.RepositorySystemSession;
+import org.sonatype.aether.repository.RemoteRepository;
 
-import javax.inject.Inject;
 import java.io.File;
 import java.util.List;
 
@@ -110,12 +109,11 @@ public class InstallPhantomJsMojo extends AbstractPhantomJsMojo implements Phant
    */
   private List<RemoteRepository> remoteRepositories;
 
+  /**
+   * The entry point to Aether, i.e. the component doing all the work.
+   * @component
+   */
   private RepositorySystem repositorySystem;
-
-  @Inject
-  public InstallPhantomJsMojo(RepositorySystem repositorySystem) {
-    this.repositorySystem = repositorySystem;
-  }
 
   @Override
   public Source getSource() {

@@ -21,13 +21,13 @@
 package com.github.klieber.phantomjs.util;
 
 import com.github.klieber.phantomjs.archive.PhantomJSArchive;
-import org.eclipse.aether.artifact.Artifact;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
+import org.sonatype.aether.artifact.Artifact;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.when;
