@@ -32,10 +32,10 @@ import java.util.List;
 
 /**
  * Maven plugin for downloading and installing phantomjs binaries.
- *
+ * @goal exec
+ * @phase test
  * @since 0.2
  */
-//@Mojo(name = "exec", defaultPhase = LifecyclePhase.TEST)
 public class ExecPhantomJsMojo extends AbstractPhantomJsMojo {
 
   private static final Logger LOGGER = LoggerFactory.getLogger(ExecPhantomJsMojo.class);
@@ -45,7 +45,7 @@ public class ExecPhantomJsMojo extends AbstractPhantomJsMojo {
 
   /**
    * Working Directory
-   * @parameter  property = "phantomjs.workingDirectory defaultValue = "${project.basedir}"
+   * @parameter  property = "phantomjs.workingDirectory" default-value = "${project.basedir}"
    * @since 0.5
    */
   private String workingDirectory;
@@ -80,7 +80,7 @@ public class ExecPhantomJsMojo extends AbstractPhantomJsMojo {
 
   /**
    * Fail on a non-zero exit code
-   * @parameter property = "phantomjs.failOnNonZeroExitCode" defaultValue = "true"
+   * @parameter property = "phantomjs.failOnNonZeroExitCode" default-value = true
    * @since 0.4
    */
   private boolean failOnNonZeroExitCode;

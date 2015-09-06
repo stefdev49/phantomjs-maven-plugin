@@ -33,7 +33,8 @@ public abstract class AbstractPhantomJsMojo extends AbstractMojo {
 
   /**
    * The name of the property that will contains the path to the binary.
-   * @parameter property="phantomjs.propertyName" required=true defaultValue="phantomjs.binary"
+   * @parameter property="phantomjs.propertyName" default-value="phantomjs.binary"
+   * @required
    * @since 0.1
    */
   private String propertyName;
@@ -47,15 +48,15 @@ public abstract class AbstractPhantomJsMojo extends AbstractMojo {
 
   /**
    * Skip the phantomjs-maven-plugin execution.
-   * @parameter property = "phantomjs.skip" defaultValue="false" required=true
+   * @parameter property = "phantomjs.skip" default-value="false"
+   * @required
    * @since 0.2
    */
   private boolean skip;
 
   /**
-   * FIXME: is property="mavenProject"  needed ?
-   *
-   * @parameter readonly=true defaultValue = "${project}"
+   * @parameter default-value = "${project}"
+   * @readonly
    */
   private MavenProject mavenProject;
 
