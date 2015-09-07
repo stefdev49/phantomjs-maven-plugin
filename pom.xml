@@ -6,7 +6,7 @@
   <version>0.8-backport-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <name>PhantomJS Maven</name>
+  <name>PhantomJS Maven backported to maven 3.0.4</name>
   <description>A library and maven plugin for downloading, installing, and executing phantomjs.</description>
 
   <url>https://github.com/klieber/phantomjs-maven-plugin</url>
@@ -63,13 +63,8 @@
 
   <issueManagement>
     <system>github</system>
-    <url>https://github.com/klieber/phantomjs-maven-plugin/issues</url>
+    <url>https://github.com/stefdev49/phantomjs-maven-plugin/issues</url>
   </issueManagement>
-
-  <ciManagement>
-    <system>travis-ci</system>
-    <url>https://travis-ci.org/klieber/phantomjs-maven-plugin</url>
-  </ciManagement>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

@@ -9,7 +9,7 @@ This a backport to maven 3.0.4 of the phantomjs-maven-plugin for installing the 
   <build>
     <plugins>
       <plugin>
-        <groupId>backported.com.github.klieber</groupId>
+        <groupId>com.github.klieber</groupId>
         <artifactId>phantomjs-maven-plugin</artifactId>
         <version>${phantomjs-maven-plugin.version}</version>
         <executions>
@@ -40,7 +40,7 @@ Example using with [jasmine-maven-plugin](http://searls.github.io/jasmine-maven-
   <build>
     <plugins>
       <plugin>
-        <groupId>backported.com.github.klieber</groupId>
+        <groupId>com.github.klieber</groupId>
         <artifactId>phantomjs-maven-plugin</artifactId>
         <version>${phantomjs-maven-plugin.version}</version>
         <executions>
@@ -89,7 +89,7 @@ Example using in a JUnit test:
   <build>
     <plugins>
       <plugin>
-        <groupId>backported.com.github.klieber</groupId>
+        <groupId>com.github.klieber</groupId>
         <artifactId>phantomjs-maven-plugin</artifactId>
         <version>${phantomjs-maven-plugin.version}</version>
         <executions>
@@ -148,7 +148,7 @@ The plugin can also execute phantomjs scripts for you as well.  The following do
   <build>
     <plugins>
       <plugin>
-        <groupId>backported.com.github.klieber</groupId>
+        <groupId>com.github.klieber</groupId>
         <artifactId>phantomjs-maven-plugin</artifactId>
         <version>${phantomjs-maven-plugin.version}</version>
         <executions>

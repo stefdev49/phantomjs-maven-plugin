@@ -10,7 +10,7 @@
   <artifactId>phantomjs-maven-plugin</artifactId>
   <packaging>maven-plugin</packaging>
 
-  <name>PhantomJS Maven Plugin</name>
+  <name>PhantomJS Maven Plugin backported to maven 3.0.4</name>
   <description>A plugin for downloading, installing, and executing phantomjs.</description>
 
   <dependencies>
