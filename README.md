@@ -1,7 +1,7 @@
 phantomjs-maven-plugin
 ======================
 
-This a backport to maven 3.0.4 maven of the phantomjs-maven-plugin for installing the [phantomjs](http://phantomjs.org) binary on your system automatically. You no longer need to have phantomjs pre-installed on your CI server or development workstation in order to use it as part of your build.  Just add the following to your build:
+This a backport to maven 3.0.4 of the phantomjs-maven-plugin for installing the [phantomjs](http://phantomjs.org) binary on your system automatically. You no longer need to have phantomjs pre-installed on your CI server or development workstation in order to use it as part of your build.  Just add the following to your build:
 
 ```xml
 <project>
