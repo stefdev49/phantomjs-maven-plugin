@@ -1,9 +1,7 @@
 phantomjs-maven-plugin
 ======================
 
-[![Build Status](https://travis-ci.org/klieber/phantomjs-maven-plugin.png?branch=master)](https://travis-ci.org/klieber/phantomjs-maven-plugin) [![Coverage Status](https://coveralls.io/repos/klieber/phantomjs-maven-plugin/badge.png)](https://coveralls.io/r/klieber/phantomjs-maven-plugin?branch=master) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.klieber/phantomjs-maven-plugin/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.klieber/phantomjs-maven-plugin) [![Stories in Ready](https://badge.waffle.io/klieber/phantomjs-maven-plugin.png?label=ready)](https://waffle.io/klieber/phantomjs-maven-plugin) [![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=kylelieber&url=https://github.com/klieber/phantomjs-maven-plugin&title=phantomjs-maven-plugin&language=java&tags=github&category=software)
-
-A maven plugin for installing the [phantomjs](http://phantomjs.org) binary on your system automatically. You no longer need to have phantomjs pre-installed on your CI server or development workstation in order to use it as part of your build.  Just add the following to your build:
+This a backport to maven 3.0.4 maven of the phantomjs-maven-plugin for installing the [phantomjs](http://phantomjs.org) binary on your system automatically. You no longer need to have phantomjs pre-installed on your CI server or development workstation in order to use it as part of your build.  Just add the following to your build:
 
 ```xml
 <project>
@@ -11,7 +9,7 @@ A maven plugin for installing the [phantomjs](http://phantomjs.org) binary on yo
   <build>
     <plugins>
       <plugin>
-        <groupId>com.github.klieber</groupId>
+        <groupId>backported.com.github.klieber</groupId>
         <artifactId>phantomjs-maven-plugin</artifactId>
         <version>${phantomjs-maven-plugin.version}</version>
         <executions>
@@ -42,7 +40,7 @@ Example using with [jasmine-maven-plugin](http://searls.github.io/jasmine-maven-
   <build>
     <plugins>
       <plugin>
-        <groupId>com.github.klieber</groupId>
+        <groupId>backported.com.github.klieber</groupId>
         <artifactId>phantomjs-maven-plugin</artifactId>
         <version>${phantomjs-maven-plugin.version}</version>
         <executions>
@@ -91,7 +89,7 @@ Example using in a JUnit test:
   <build>
     <plugins>
       <plugin>
-        <groupId>com.github.klieber</groupId>
+        <groupId>backported.com.github.klieber</groupId>
         <artifactId>phantomjs-maven-plugin</artifactId>
         <version>${phantomjs-maven-plugin.version}</version>
         <executions>
@@ -150,7 +148,7 @@ The plugin can also execute phantomjs scripts for you as well.  The following do
   <build>
     <plugins>
       <plugin>
-        <groupId>com.github.klieber</groupId>
+        <groupId>backported.com.github.klieber</groupId>
         <artifactId>phantomjs-maven-plugin</artifactId>
         <version>${phantomjs-maven-plugin.version}</version>
         <executions>
